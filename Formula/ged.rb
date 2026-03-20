@@ -1,21 +1,21 @@
 class Ged < Formula
   desc "Streaming text editor for pipelines — modern sed alternative"
   homepage "https://github.com/colinta/ged"
-  version "1.1.0"
+  version "1.3.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/colinta/ged/releases/download/1.1.0/ged-darwin-arm64.tar.gz"
-      sha256 "63306dd9e025f2c80c2473db4d47bc44daf1414d5ca36e98c861b59b0c22e3cb"
+      url "https://github.com/colinta/ged/releases/download/1.3.2/ged-darwin-arm64.tar.gz"
+      sha256 "49cda557d88203d46ea81a48c69f3cd0861408281113cbe12e9024b0ac5e3eca"
 
       def install
         bin.install "ged-darwin-arm64" => "ged"
         man1.install "ged.1"
       end
     else
-      url "https://github.com/colinta/ged/releases/download/1.1.0/ged-darwin-amd64.tar.gz"
-      sha256 "dfcce7201c2a5a8e98ee5e6f6567364a6220e106e21c5d554c97981382059ef8"
+      url "https://github.com/colinta/ged/releases/download/1.3.2/ged-darwin-amd64.tar.gz"
+      sha256 "9162715c46db8e22c903a4036f8587457e7e65019562f88a0596ae20d9a03c33"
 
       def install
         bin.install "ged-darwin-amd64" => "ged"
@@ -26,16 +26,16 @@ class Ged < Formula
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/colinta/ged/releases/download/1.1.0/ged-linux-arm64.tar.gz"
-      sha256 "5696a5f4e22d7f46d72fcc1a767c46409740141334a6361aa42e0f01a89a1822"
+      url "https://github.com/colinta/ged/releases/download/1.3.2/ged-linux-arm64.tar.gz"
+      sha256 "bfe45d0bbb869edeb068de41ca31db24cc7834e9ba58ea5acf5e7d273930f912"
 
       def install
         bin.install "ged-linux-arm64" => "ged"
         man1.install "ged.1"
       end
     else
-      url "https://github.com/colinta/ged/releases/download/1.1.0/ged-linux-amd64.tar.gz"
-      sha256 "898286addec513a9f2f18cef8b5942e41dd740b163f54729460d20886b4d5723"
+      url "https://github.com/colinta/ged/releases/download/1.3.2/ged-linux-amd64.tar.gz"
+      sha256 "0d0ac256155c3b997311d36f8bf2080cbb9f633c6475d6e69f0cd70b04fb0dc4"
 
       def install
         bin.install "ged-linux-amd64" => "ged"
@@ -46,6 +46,7 @@ class Ged < Formula
 
   test do
     assert_match "hello earth",
-      pipe_output("#{bin}/ged 's/world/earth/'", "hello world\n").strip
+      pipe_output("#{bin}/ged 's/world/earth/'", "hello world
+").strip
   end
 end
