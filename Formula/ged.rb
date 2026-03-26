@@ -1,21 +1,21 @@
 class Ged < Formula
   desc "Streaming text editor for pipelines — modern sed alternative"
   homepage "https://github.com/colinta/ged"
-  version "1.3.2"
+  version "1.4.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/colinta/ged/releases/download/1.3.2/ged-darwin-arm64.tar.gz"
-      sha256 "49cda557d88203d46ea81a48c69f3cd0861408281113cbe12e9024b0ac5e3eca"
+      url "https://github.com/colinta/ged/releases/download/1.4.2/ged-darwin-arm64.tar.gz"
+      sha256 "f214862ad323878347281d136c5328c56e2d1b2edd4fd377877d917704f808b1"
 
       def install
         bin.install "ged-darwin-arm64" => "ged"
         man1.install "ged.1"
       end
     else
-      url "https://github.com/colinta/ged/releases/download/1.3.2/ged-darwin-amd64.tar.gz"
-      sha256 "9162715c46db8e22c903a4036f8587457e7e65019562f88a0596ae20d9a03c33"
+      url "https://github.com/colinta/ged/releases/download/1.4.2/ged-darwin-amd64.tar.gz"
+      sha256 "ec18814c2fcbee24174440ac9b3814e413e8c7147045af950fe55cbd3b6715f3"
 
       def install
         bin.install "ged-darwin-amd64" => "ged"
@@ -26,16 +26,16 @@ class Ged < Formula
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/colinta/ged/releases/download/1.3.2/ged-linux-arm64.tar.gz"
-      sha256 "bfe45d0bbb869edeb068de41ca31db24cc7834e9ba58ea5acf5e7d273930f912"
+      url "https://github.com/colinta/ged/releases/download/1.4.2/ged-linux-arm64.tar.gz"
+      sha256 "5e38d627b80bbc150a55c8910a66570f0cb58ac8f2b110f276c486128deba667"
 
       def install
         bin.install "ged-linux-arm64" => "ged"
         man1.install "ged.1"
       end
     else
-      url "https://github.com/colinta/ged/releases/download/1.3.2/ged-linux-amd64.tar.gz"
-      sha256 "0d0ac256155c3b997311d36f8bf2080cbb9f633c6475d6e69f0cd70b04fb0dc4"
+      url "https://github.com/colinta/ged/releases/download/1.4.2/ged-linux-amd64.tar.gz"
+      sha256 "5ee6f01596baff4a5c4115176358d8d5be0718772aa226e8651426c0b8b56c70"
 
       def install
         bin.install "ged-linux-amd64" => "ged"
